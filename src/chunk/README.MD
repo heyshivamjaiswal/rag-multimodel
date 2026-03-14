@@ -45,8 +45,9 @@ Reason: splitDocuments expects a list of Documents, not raw strings. Metadata (l
 ```
 ts
 const chunks = await splitter.splitDocuments([rawDoc]);
-Purpose: Uses the RecursiveCharacterTextSplitter to break the big Document into smaller chunks.
 ```
+Purpose: Uses the RecursiveCharacterTextSplitter to break the big Document into smaller chunks.
+
 
 Reason: Smaller chunks improve retrieval precision and reduce token usage when passing context to the LLM.
 
