@@ -1,4 +1,14 @@
 # Interacting with vector database
+```
+export async function getVectorStore(userId: string): Promise<PineconeStore> {
+  const index = pineconeClient.index(PINECONE_INDEX_NAME);
+ 
+  return PineconeStore.fromExistingIndex(embeddings, {
+    pineconeIndex: index,
+    namespace: userId,   // ← this is the key! scopes everything to this user
+  });
+}
+```
 
 * 1. Adding Documents for a User
 ```
